@@ -23,6 +23,13 @@ endpoints:
   agents:
     capabilities:
       - "file_search"
+      - "web_search"
       - "context"
       - "tools"
       - "actions"
+
+webSearch:
+  tavilyApiKey: "${TAVILY_API_KEY}"
+  searchProvider: "tavily"
+  scraperType: "tavily"
+  rerankerType: "none"
