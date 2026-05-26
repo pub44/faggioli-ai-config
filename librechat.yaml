@@ -1,0 +1,27 @@
+version: 1.3.5
+cache: true
+
+# === LIMITE DI SPESA PER MEMBRO (~3 $/mese) ===
+# 1.000.000 crediti ≈ 1 $  →  3.000.000 ≈ 3 $/mese
+balance:
+  enabled: true
+  startBalance: 3000000
+  autoRefillEnabled: true
+  refillIntervalValue: 30
+  refillIntervalUnit: "days"
+  refillAmount: 3000000
+
+# === AGENT: solo l'admin (Kevin) li crea — i membri li usano e basta ===
+interface:
+  agents:
+    use: true
+    create: false
+
+# === Capacità degli agent (knowledge base / file upload) ===
+endpoints:
+  agents:
+    capabilities:
+      - "file_search"
+      - "context"
+      - "tools"
+      - "actions"
