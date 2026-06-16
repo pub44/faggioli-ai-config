@@ -17,6 +17,9 @@ balance:
 interface:
   agents:
     use: true
+  # Link "Top up credits" mostrato nel footer dell'app (utenti loggati).
+  # Pagina ricarica crediti Stripe (servizio Railway "topup").
+  customFooter: "[Top up credits](https://topup-production-3dcb.up.railway.app) | Faggioli AI — Publishing Incubator"
 
 # === Capacità degli agent (knowledge base / file upload) ===
 endpoints:
